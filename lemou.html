@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <script type = "text/javascript">
+    $(document).ready(function() {
+      $("#adder").click(function() {
+        $("body").addClass("add");
+        $("#adder").click(function() {
+          $("body").removeClass("add");
+        });
+      });
+      $("#toggle").hover(function(){
+        $(this).css("background-color", "blue");
+      }, function() {
+        $(this).css("background-color", "white");
+      });
+      $("#toggle").click(function() {
+        $("#togs").slideToggle("slow");
+      })
+    });
+    </script>
+  <link rel="stylesheet" type="text/css" href="jQuery_style.css">
+</head>
+<body>
+  <div class = "API">
+    <h1>AddClass</h1>
+    <button type="button" class="webButtons" id = "adder">AddClass</button><p class ="newParagraphs">Adds the selected class to the assigned element</p>
+  </div>
+  <div class = "API">
+    <h1>SlideToggle</h1>
+    <button type="button" class="webButtons" id = "toggle">SlideToggle</button><p class ="newParagraphs" id = "togs">It toggles things. You know. Things</p>
+  </div>
+</body>
+</html>
